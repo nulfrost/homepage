@@ -2,25 +2,57 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Maven Pro", sans-serif;
 }
 
-/* Mobile Styles */
-@media only screen and (max-width: 400px) {
-  body {
-    background-color: #F09A9D; /* Red */
-  }
+body {
+  background-image: url("/images/1547582809621.jpg");
 }
 
-/* Tablet Styles */
-@media only screen and (min-width: 401px) and (max-width: 960px) {
-  body {
-    background-color: #F5CF8E; /* Yellow */
-  }
+.main-container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100%;
+  justify-items: center;
+  align-items: center;
 }
 
-/* Desktop Styles */
-@media only screen and (min-width: 961px) {
-  body {
-    background-color: #B2D6FF; /* Blue */
+.link-container {
+  color: #0f0f0f;
+  font-weight: bold;
+  font-size: 2.5em;
+}
+
+.link-container > ul > li {
+  list-style: none;
+}
+
+.link-title::after {
+  content: "";
+  display: block;
+  border-bottom: 3px solid #0f0f0f;
+  margin-bottom: 5px;
+}
+
+.link-container > ul > li > a:hover {
+  margin-left: 20px;
+  color: white;
+  transition: 0.5s;
+}
+
+a {
+  text-decoration: none;
+  color: #0f0f0f;
+}
+
+a:visited {
+  color: #0f0f0f;
+}
+
+@media only screen and (max-width: 700px) {
+  .main-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
   }
 }
