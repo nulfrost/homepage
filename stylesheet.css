@@ -21,11 +21,16 @@ body {
 .link-container {
   color: #0f0f0f;
   font-weight: bold;
-  font-size: 2.5em;
+  font-size: 1.2em;
+  width: 200px;
 }
 
 .link-container > ul > li {
   list-style: none;
+}
+
+.link-container > ul > li a {
+  transition: 0.5s ease-in-out;
 }
 
 .link-title::after {
@@ -37,8 +42,7 @@ body {
 
 .link-container > ul > li > a:hover {
   margin-left: 20px;
-  color: white;
-  transition: 0.5s;
+  transition: 0.5s ease-in-out;
 }
 
 a {
