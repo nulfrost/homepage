@@ -1,69 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Karla&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Maven Pro", sans-serif;
-  overflow-y: hidden;
+  font-family: 'Karla', sans-serif;
 }
 
-body {
-  background-image: url("/images/1547582809621.jpg");
-}
-
-.main-container {
+.content-container {
+  background-color: #383f51;
   height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 100%;
-  justify-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
 
+.information {
+  width: 25%;
+  /*border: 1px solid red;*/
+  display: flex;
+  justify-content: space-around;
+}
+
+#date,
+#time {
+  padding: 10px;
+  color: #dddbf1;
+}
+
+#time {
+  /*margin-left: auto;*/
+}
+
 .link-container {
-  color: #0f0f0f;
-  font-weight: bold;
-  font-size: 1.4em;
-  width: 200px;
+  width: 25%;
+  display: flex;
+  flex-wrap: wrap;
+  height: 30%;
+  /*border: 1px solid red;*/
+  align-items: center;
 }
 
-.link-container > ul > li {
+ul {
   list-style: none;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*border: 1px solid white;*/
+  height: 50%;
 }
 
-.link-container > ul > li a {
-  transition: 0.5s ease-in-out;
+ul h4,
+ul li {
+  color: #dddbf1;
 }
-
-.link-title::after {
-  content: "";
-  display: block;
-  border-bottom: 3px solid #0f0f0f;
+h4 {
+  border-bottom: 2px solid #dddbf1;
   margin-bottom: 5px;
 }
 
-.link-container > ul > li > a:hover {
-  margin-left: 20px;
-  transition: 0.5s ease-in-out;
+ul li:hover {
+  background-color: #dddbf1;
+  color: #383f51;
 }
 
-a {
-  text-decoration: none;
-  color: #0f0f0f;
-}
-
-a:visited {
-  color: #0f0f0f;
-}
-
-@media only screen and (max-width: 700px) {
-  .main-container {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-  }
-}
-
-.time-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
+ul li {
+  width: 60%;
+  text-align: center;
+  padding: 2px;
+  border-radius: 10px;
+  transition: 0.5s;
 }
