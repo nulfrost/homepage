@@ -88,3 +88,22 @@ a:visited,
 a:active {
   text-decoration: none;
 }
+
+@media only screen and (max-width: 880px) {
+  .link-container {
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+  }
+
+  ul {
+    width: 50%;
+    height: 20%;
+  }
+
+  .information {
+    flex-direction: column;
+    align-items: center;
+  }
+}
