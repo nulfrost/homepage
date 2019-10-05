@@ -18,7 +18,7 @@ setInterval(() => {
 
 const hour = new Date().getHours();
 
-setInterval(() => {
+function setMessage(hour) {
   if (hour >= 12 && hour <= 17) {
     message.innerHTML = 'Good afternoon.';
   } else if (hour >= 18 && hour <= 23) {
@@ -26,4 +26,6 @@ setInterval(() => {
   } else {
     message.innerHTML = 'Good morning.';
   }
-}, 60 * 60 * 1000);
+}
+
+setInterval(setMessage(hour), 1000 * 60 * 60);
